@@ -11,12 +11,12 @@ class Brick extends Actor {
 	}
 	collusion() {
 		if(this.rectBox(ball)) {
-			if(ball.y > this.y || ball.y < this.y + this.hei) {
+			if(ball.y < this.y || ball.y > this.y + this.hei) {
 				if(ball.bounceTimer > 5)  {
 					ball.yBounce();
 				}
 			}
-			if(ball.x > this.x || ball.x < this.x + this.wid) {
+			if(ball.x < this.x || ball.x > this.x + this.wid) {
 				if(ball.bounceTimer > 5)  {
 					ball.xBounce();
 				}
