@@ -53,7 +53,14 @@ function mousePressed() {
   if(lost) {
     lost = false;
     loop();
-    setup();
+    paddle = new Paddle(width/2-40, 350);
+    ball = new Ball(width/2, 300);
+    for (let i = 0; i < 8; i++) {
+      bricks[i] = [];
+      for (let j = 0; j < 4; j++) {
+        bricks[i][j] = new Brick(75 * i, 25 * j);
+      }
+    }
   }
   if(!started) {
     started = true;
