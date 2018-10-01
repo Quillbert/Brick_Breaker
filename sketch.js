@@ -61,6 +61,7 @@ function mousePressed() {
         bricks[i][j] = new Brick(75 * i, 25 * j);
       }
     }
+    timesCleared = 0;
   }
   if(!started) {
     started = true;
