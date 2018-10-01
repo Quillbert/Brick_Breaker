@@ -24,6 +24,8 @@ class Ball extends Actor {
 			textAlign(CENTER, CENTER);
 			textSize(30);
 			text("GAME OVER", width/2, height/2);
+	        text("Click to restart", width/2, height/2 + 50);
+      		lost = true;
 			noLoop();
 			pop();
 		}
